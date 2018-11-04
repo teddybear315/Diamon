@@ -1,0 +1,1 @@
+python Interpreter/__main__.py "/../Diamon Scripts/dia.mon"

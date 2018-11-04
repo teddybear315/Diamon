@@ -1,0 +1,9 @@
+clr "red"
+prnt "Attention!"
+clr "yellow"
+prnt "Caution!"
+clr "green"
+prnt "Ready!"
+clr "grey"
+bclr "magenta"
+1
