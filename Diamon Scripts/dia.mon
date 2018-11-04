@@ -1,8 +1,3 @@
-$clr "red"
-prnt "Attention!"
-$clr "yellow"
-prnt "Caution!"
-$clr "green"
-prnt "Ready!"
-$var name = "hello"
-$var name2 = "hello"
+$time = 32*2
+prnt $time
+prnt "green"
