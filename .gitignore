@@ -1,2 +1,8 @@
-Logos/
+Interpreter/Interpreter/.vs/*
+Interpreter/Interpreter/x64/*
+Interpreter/Interpreter/*.vcxproj
+Interpreter/Interpreter/*.filters
+Interpreter/Interpreter/*.user
+Interpreter/Interpreter/*.sln
+
 Diamon Scripts/*.mon
