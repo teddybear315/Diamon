@@ -40,5 +40,5 @@ void lex(std::vector<char> fileData) {
 
 	}
 
-	std::cout << joinVctr(tokens) << std::endl;
+	//std::cout << joinVctr(tokens) << std::endl;
 }
