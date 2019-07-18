@@ -29,8 +29,7 @@ void lex(std::vector<char> fileData) {
 		} else if (tok._Equal("prnt")) {
 			std::cout << "Found a print" << std::endl;
 			tok = "";
-		}
-		else if (inString) {
+		} else if (inString) {
 			str += character;
 			tok = "";
 		}
