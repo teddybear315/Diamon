@@ -8,6 +8,8 @@
 
 #define boolean bool
 
+std::vector<std::string> tokens;
+
 /* Lexes a file for parsing */
 void lex(std::vector<char> fileData) {
 	std::string tok, str;
@@ -15,24 +17,28 @@ void lex(std::vector<char> fileData) {
 
 	for (char character : fileData) {
 		tok += character;
-		//std::cout << tok << std::endl;
-		if (tok._Equal(" ")) tok = "";
+		if (tok._Equal(" ") && !inString) tok = "";
+		
 		else if (tok._Equal("\"") || tok._Equal("\'")) {
 			if (!inString) {
 				inString = true;
 			} else {
-				str = "";
-				std::cout << "Found a string" << std::endl;
+				tokens.push_back("STR:" + str);
 				inString = false;
+				str = "";
+				tok = "";
 			}
-		
+
 		} else if (tok._Equal("prnt")) {
-			std::cout << "Found a print" << std::endl;
+			tokens.push_back("PRNT");
 			tok = "";
+
 		} else if (inString) {
 			str += character;
 			tok = "";
 		}
 
 	}
+
+	std::cout << joinVctr(tokens) << std::endl;
 }

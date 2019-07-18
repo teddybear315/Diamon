@@ -16,9 +16,7 @@ int main(int varc, char** vars) {
 		return 9;
 	}
 
-	std::vector<char> tokens = getFileData(cmdVars[1]);
-
-	lex(tokens);
+	lex(getFileData(cmdVars[1])); // lex the provided file
 
 	return 0;
 
