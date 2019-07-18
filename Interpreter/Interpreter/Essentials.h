@@ -12,3 +12,6 @@ std::string joinVctr(std::vector<std::string> vector, std::string delimeter);
 
 /* LEXER */
 void lex(std::vector<char> fileData);
+
+/* PARSER */
+void parser(std::vector<std::string> lexedTokens);

@@ -17,6 +17,7 @@ int main(int varc, char** vars) {
 	}
 
 	lex(getFileData(cmdVars[1])); // lex the provided file
+	parser(tokens);
 
 	return 0;
 

@@ -36,7 +36,7 @@ void lex(std::vector<char> fileData) {
 		} else if (inString) {
 			str += character;
 			tok = "";
-		}
+		} else continue;
 
 	}
 
