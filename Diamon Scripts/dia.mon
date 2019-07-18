@@ -1,3 +1,1 @@
-$time = 32*2
-prnt $time
 prnt "green"

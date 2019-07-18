@@ -4,24 +4,22 @@
 #include <string>
 #include <algorithm>
 
+#include "Essentials.h"
+
 int main(int varc, char** vars) {
 
 	std::vector<std::string> cmdVars;
 	for (int i = 0; i < varc; ++i) cmdVars.push_back(vars[i]);
-	
+
 	if (varc < 2) {
 		std::cout << "Usage: " << cmdVars[0] << " <path-to-diamon-script>";
-		std::cin.get();
 		return 9;
 	}
 
-	std::ifstream script(cmdVars[1]);
+	std::vector<char> tokens = getFileData(cmdVars[1]);
 
-	for (std::string line; std::getline(script, line);) {
-		std::cout << line << std::endl;
-	}
+	lex(tokens);
 
-	std::cin.get();
 	return 0;
 
 }
