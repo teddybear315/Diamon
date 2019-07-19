@@ -23,9 +23,12 @@ std::vector<char> getFileData(std::string filename) {
 	if (!file) return std::vector<char>();
 	std::vector<char> tokens;
 
-	for (std::string line; std::getline(file, line);)
+	for (std::string line; std::getline(file, line);) {
 		for (int character = 0; character < line.length(); ++character)
 			tokens.push_back(line[character]);
+		tokens.push_back('\\');
+		tokens.push_back('n');
+	}
 
 	return tokens;
 }

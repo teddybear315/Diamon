@@ -28,17 +28,27 @@ void lex(std::vector<char> fileData) {
 				str = "";
 				tok = "";
 			}
-
-		} else if (tok._Equal("prnt")) {
-			tokens.push_back("PRNT");
+		}
+		else if (tok._Equal("\\n")) {
+			tokens.push_back(tok);
 			tok = "";
 
-		} else if (inString) {
+		}
+		else if (tok._Equal("print")) {
+			tokens.push_back("PRINT");
+			tok = "";
+		} 
+		else if (tok._Equal("throw")) {
+			tokens.push_back("THROW");
+			tok = "";
+		}
+		else if (inString) {
 			str += character;
 			tok = "";
 		} else continue;
 
+
 	}
 
-	//std::cout << joinVctr(tokens) << std::endl;
+	std::cout << joinVctr(tokens) << std::endl;
 }
