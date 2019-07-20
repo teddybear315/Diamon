@@ -1,0 +1,4 @@
+print "This is a string test
+test"
+print "Will multiple lines work???"
+throw "Test error"
