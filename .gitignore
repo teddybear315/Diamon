@@ -1,5 +1,6 @@
 Interpreter/Interpreter/.vs/*
 Interpreter/Interpreter/x64/*
+!*/*.exe
 Interpreter/Interpreter/*.vcxproj
 Interpreter/Interpreter/*.filters
 Interpreter/Interpreter/*.user

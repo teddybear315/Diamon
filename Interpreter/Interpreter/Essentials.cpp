@@ -47,3 +47,23 @@ std::string joinVctr(std::vector<std::string> vector, std::string delimeter) {
 	}
 	return(ss.str());
 }
+
+std::string print(std::string str, bool logging, std::fstream& logFile) {
+	std::string tok;
+	if (!logging) {
+		for (char character : str) {
+			tok += character;
+			if (tok._Equal("\n")) { std::cout << std::endl; tok = ""; }
+			else if (tok._Equal("\\")) { std::cout << "\\"; tok = ""; }
+			else { std::cout << tok; tok = ""; }
+		}
+	} else {
+		for (char character : str) {
+			tok += character;
+			if (tok._Equal("\n")) { logFile << '\n'; tok = ""; }
+			else if (tok._Equal("\\")) { logFile << "\\"; tok = ""; }
+			else { logFile << tok; tok = ""; }
+		}
+	}
+	return str;
+}
