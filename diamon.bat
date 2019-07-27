@@ -1,1 +1,0 @@
-python Interpreter/__main__.py %1
